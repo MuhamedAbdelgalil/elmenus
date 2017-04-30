@@ -29,39 +29,39 @@
                         <section class="info">
                             <div class="title">
                                 <h3>{{category.name}}</h3>
-                                <span class="separator"></span>
+                                <span class="separator hidden-sm-down"></span>
                             </div>
 
                             <div class="slider_nav" style="display: block;">
-<a ng-click="addDish(category)"><i  class="fa fa-plus fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Add new dish</md-tooltip></a>
-<a ng-click="updateCategory(category)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit this category</md-tooltip></a>
-<a ng-click="deleteCategory(category)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete this category</md-tooltip></a>
+                                <a ng-click="addDish(category)"><i  class="fa fa-plus fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Add new dish</md-tooltip></a>
+                                <a ng-click="updateCategory(category)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit this category</md-tooltip></a>
+                                <a ng-click="deleteCategory(category)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete this category</md-tooltip></a>
 
-</div>
-</section>
-<div ng-repeat="dish in category.items" class="one-dish col-md-4 col-sm-6 dishe_img flip-container">
-    <div>
-        <img ng-src="{{ dish.imageUrl || './image/dish.jpg'}}" alt={{dish.name}} title={{dish.name}} />
-        <div class="dish_info">
-            <a href="#">
-                <h2>{{dish.name}}</h2>
-            </a>
-            <h3>{{dish.price}}</h3>
-        </div>
-        <div>
-            <a ng-click="updateDish(category,dish)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit</md-tooltip></a>
-            <a ng-click="deleteDish(category,dish)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete</md-tooltip></a>
-        </div>
+                            </div>
+                        </section>
+            <div ng-repeat="dish in category.items" class="one-dish col-md-4 col-sm-6 dishe_img flip-container">
+                <div>
+                    <img ng-src="{{ dish.imageUrl || './image/dish.jpg'}}" alt={{dish.name}} title={{dish.name}} />
+                    <div class="dish_info">
+                        <a href="#">
+                            <h2>{{dish.name}}</h2>
+                        </a>
+                        <h3>{{dish.price}}</h3>
+                    </div>
+                    <div>
+                        <a ng-click="updateDish(category,dish)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit</md-tooltip></a>
+                        <a ng-click="deleteDish(category,dish)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete</md-tooltip></a>
+                    </div>
 
-    </div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+            </div>
 
-</div>
-</section>
-</div>
+            </div>
+            </section>
+            </div>
 </section>
 <footer>
     <div class="wrapper">
@@ -74,10 +74,10 @@
                     <p>© All Rights Reserved 2017.</p>
                     <p>Find More at
                         <a href="https://www.elmenus.com/" target="_blank" style="cursor: pointer">ElMENUS.COM</a>
-                    </p>
-                </section>
-            </div>
-            <div class="col-xs-4"></div>
-        </div>
-    </div>
+</p>
+</section>
+</div>
+<div class="col-xs-4"></div>
+</div>
+</div>
 </footer>

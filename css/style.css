@@ -1077,3 +1077,20 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
 .md-toolbar-tools h1, .md-toolbar-tools h2, .md-toolbar-tools h3{
     color:#fff !important;
 }
+md-dialog{
+    min-width: 50%;
+}
+
+
+/*media query issue */
+@media only screen and (max-width: 500px) {
+	
+	.featured_dishes .slider_nav{padding-right:0px !important;width:auto !important}
+    .separator{
+        display: none;
+    }
+    footer section{
+            margin-left: -71px;
+    }
+
+}
