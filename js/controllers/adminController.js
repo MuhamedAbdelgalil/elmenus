@@ -106,7 +106,7 @@
                 templateUrl: './pages/dish.html',
                 controller: DialogController,
                 locals: {
-                    modalTitle: "Add new dish",
+                    modalTitle: "Update dish",
                     category: $scope.category,
                 }
             })// if updates
