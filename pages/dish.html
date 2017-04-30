@@ -32,6 +32,12 @@
                         <div ng-message="required">This is required.</div>
                     </div>
                 </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Upload photo</label>
+                    
+                    <input type="file" fileinput="file" filepreview="filepreview"/>
+                    <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview"/>
+                </md-input-container>
                 <md-dialog-content>
                     <md-dialog-actions>
                         <span flex></span>
@@ -43,7 +49,7 @@
                         </md-button>
                     </md-dialog-actions>
                 </md-dialog-content>
-                    
+
             </div>
     </form>
 </md-dialog>
