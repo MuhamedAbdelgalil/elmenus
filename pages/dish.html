@@ -1,0 +1,49 @@
+<md-dialog aria-label="operation" class="full-size">
+    <form ng-cloak name="dishForm" novalidate ng-submit="dishForm.$valid  && done(category.dish)" class="modal-form">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>{{modalTitle}}</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <md-icon class="fa fa-close"></md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <div class="md-dialog-content">
+                <md-input-container class="md-block">
+                    <label>Dish Name</label>
+                    <input ng-model="category.dish.name" md-maxlength="30" required md-no-asterisk name="name">
+                    <div ng-messages="dishForm.name.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Dish Discription</label>
+                    <input ng-model="category.dish.description" md-maxlength="200" required md-no-asterisk name="description">
+                    <div ng-messages="dishForm.description.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Dish price</label>
+                    <input ng-model="category.dish.price" md-no-asterisk md-maxlength="10" required name="price">
+                    <div ng-messages="dishForm.price.$error">
+                        <div ng-message="required">This is required.</div>
+                    </div>
+                </md-input-container>
+                <md-dialog-content>
+                    <md-dialog-actions>
+                        <span flex></span>
+                        <md-button type="submit">
+                            {{modalTitle}}
+                        </md-button>
+                        <md-button ng-click="cancel()">
+                            Cancel
+                        </md-button>
+                    </md-dialog-actions>
+                </md-dialog-content>
+                    
+            </div>
+    </form>
+</md-dialog>

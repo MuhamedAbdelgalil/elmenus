@@ -1,0 +1,34 @@
+<md-dialog aria-label="operation" class="full-size">
+  <form ng-cloak ng-cloak name="categoryForm" novalidate ng-submit="categoryForm.$valid  && done(category.name)" class="modal-form">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>{{modalTitle}}</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon class="fa fa-close"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <md-input-container class="md-block">
+          <label>Category Name</label>
+          <input ng-model="category.name" md-maxlength="30" required md-no-asterisk name="name">
+          <div ng-messages="categoryForm.name.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+      </div>
+      <md-dialog-content>
+        <md-dialog-actions>
+          <span flex></span>
+          <md-button type="submit">
+            {{modalTitle}}
+          </md-button>
+          <md-button ng-click="cancel()">
+            Cancel
+          </md-button>
+        </md-dialog-actions>
+      </md-dialog-content>
+  </form>
+</md-dialog>

@@ -1,0 +1,83 @@
+<!--  start header  -->
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#!/"><img src="image/logo.png" alt="Elmenus" title="Elmenus" class="img-responsive" /></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#!/">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--  end header  -->
+
+<!--  start dishes  -->
+<section class="featured_dishes menu">
+    <div class="wrapper">
+        <div class="menu_title">
+            <h2>The Menu</h2>
+        </div>
+        <section class="dishes" id="dishes">
+            <div class="container">
+                <div>
+                    <!--Loop over categories -->
+                    <div ng-repeat="category in categoriesList" class="row">
+                        <section class="info">
+                            <div class="title">
+                                <h3 class="category-name">{{category.name}}</h3>
+                                <span class="separator"></span>
+                            </div>
+                        </section>
+                        <!--Loop over each dish in categoreis-->
+                        <div ng-repeat="dish in category.items" class="one-dish col-md-3 col-sm-6 dishe_img flip-container">
+                            <div>
+                                <div class="flipper">
+                                    <div class="front">
+                                        <img ng-src="{{ dish.imageUrl || './image/dish.jpg'}}" alt={{dish.name}} title={{dish.name}} />
+                                        <div class="dish_info">
+                                            <a href="#">
+                                                <h2 class="category-name">{{dish.name}}</h2>
+                                            </a>
+                                            <h3 class="dish-price">{{dish.price}} LE</h3>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <p class="dish-desc">
+                                            {{dish.description || "No description"}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+        </section>
+        </div>
+</section>
+<!--  end dishes  -->
+
+<!--  start footer  -->
+<footer>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+
+                <section class="copyrights">
+                    <img src="image/logo.png" alt="Elmenus" title="Elmenus" />
+                    <p>© All Rights Reserved 2017.</p>
+                    <p>Find More at <a href="https://www.elmenus.com/" target="_blank" style="cursor: pointer">ElMENUS.COM</a></p>
+                </section>
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+
+    </div>
+</footer>
+<!--  end footer  -->

@@ -1,0 +1,44 @@
+<div id="login-Page">
+    <div class="top-content">
+        <div class="inner-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 text">
+                        <h1><strong>Elmenus</strong> Login Form</h1>
+                        <div class="description">
+                            <p>
+                                <a href="https://www.elmenus.com/"><strong>elmenus</strong></a> helps you decide what to
+                                eat
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Login to Elmenus</h3>
+                                <p>Login as:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            <form role="form" method="post" class="login-form">
+                                <div class="form-group">
+                                    <select ng-model="role" class="form-control">
+                                        <option>Admin</option>
+                                        <option>User</option>
+                                    </select>
+                                </div>
+                                <a href="./#!/admin" ng-if="role == 'Admin'"  type="submit" class="btn btn-link-2">Sign in!</a>
+                                <a href="./#!/user" ng-if="role == 'User'"  type="submit" class="btn btn-link-2">Sign in!</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

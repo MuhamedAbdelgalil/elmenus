@@ -1,0 +1,83 @@
+<!--  start header  -->
+<header ng-controller="adminController">
+    <div class="wrapper">
+        <div class="logo">
+            <a href="#!/"><img src="image/logo.png" alt="Resto" title="" class="img-responsive" /></a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#!/">Log Out</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--  end header  -->
+
+<!--  start featured dishes  -->
+<section class="featured_dishes menu">
+    <div class="wrapper container">
+        <div class="menu_title row text-center">
+            <h2 ng-click="addCategory()">Add Category
+                <md-tooltip md-direction="left">Add New Category</md-tooltip>
+            </h2>
+        </div>
+        <section class="dishes" id="dishes">
+            <div class="container">
+                <div>
+                    <div ng-repeat="category in categoriesList" class="row">
+                        <section class="info">
+                            <div class="title">
+                                <h3>{{category.name}}</h3>
+                                <span class="separator"></span>
+                            </div>
+
+                            <div class="slider_nav" style="display: block;">
+<a ng-click="addDish(category)"><i  class="fa fa-plus fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Add new dish</md-tooltip></a>
+<a ng-click="updateCategory(category)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit this category</md-tooltip></a>
+<a ng-click="deleteCategory(category)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete this category</md-tooltip></a>
+
+</div>
+</section>
+<div ng-repeat="dish in category.items" class="one-dish col-md-4 col-sm-6 dishe_img flip-container">
+    <div>
+        <img ng-src="{{ dish.imageUrl || './image/dish.jpg'}}" alt={{dish.name}} title={{dish.name}} />
+        <div class="dish_info">
+            <a href="#">
+                <h2>{{dish.name}}</h2>
+            </a>
+            <h3>{{dish.price}}</h3>
+        </div>
+        <div>
+            <a ng-click="updateDish(category,dish)"><i  class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Edit</md-tooltip></a>
+            <a ng-click="deleteDish(category,dish)"><i  class="fa fa-trash-o fa-lg" aria-hidden="true"></i><md-tooltip md-direction="top">Delete</md-tooltip></a>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+</section>
+</div>
+</section>
+<footer>
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-xs-4"></div>
+            <div class="col-xs-4">
+
+                <section class="copyrights">
+                    <img src="image/logo.png" alt="Elmenus" title="Elmenus" />
+                    <p>© All Rights Reserved 2017.</p>
+                    <p>Find More at
+                        <a href="https://www.elmenus.com/" target="_blank" style="cursor: pointer">ElMENUS.COM</a>
+                    </p>
+                </section>
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+    </div>
+</footer>
